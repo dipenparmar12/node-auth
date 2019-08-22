@@ -25,6 +25,15 @@ Before using this module make sure you have installed phpmyadmin or any other my
 
 #  Quick Start
   
+  Before starting project setup your database configuration in **.env** file  ( root directory)
+### DB CONFIG ######
+DB_TYPE= DBMS (mysql, sqllite, mongodb, etc)
+DB_HOST=localhost
+DB_USER=root
+DB_PASS='secret'
+DB_NAME=test
+
+  
  Start the server in debug mode :
 > **$** npm dev
  
@@ -52,10 +61,58 @@ View the website at:  [http://localhost:3000/login](http://localhost:3000/login)
 | localhost:8000 | PATCH  |`"/api/teachers/{:id}"`  | checkJwt | Update Teacher 
 | localhost:8000 | DELETE  |`"/api/teachers/{:id}"`  | checkJwt | Destroy Teacher 
 
+
+
+
+# Features
+
+ -  Robust routing
+ -   Focus on high performance
+ -   HTTP helpers (redirection, cookies, etc)
+ -   View system supported
+ -   Executable for generating applications quickly
+ -  supports both DataMapper and ActiveRecord (your choice)
+-   entities and columns
+-   database-specific column types
+-   entity manager
+-   repositories and custom repositories
+-   clean object relational model
+-   associations (relations)
+-   supports MySQL / MariaDB / Postgres / CockroachDB / SQLite / Microsoft SQL Server / Oracle / sql.js
+ -   supports MongoDB NoSQL database
+-   TypeScript and JavaScript support
+-   follows all possible best practices
+
+
+
+
+# Project Structure
+```
+ProjectRoot
+├── src              // place of your TypeScript code
+│   ├── entity       // place where your entities (database models) are stored
+│   │   └── User.ts  // sample entity
+│   ├── controllers  // place where your controllers are stored
+│   │   └── teacherController.ts  // API Controller ( Teacher Entity )
+│   │   └── authController.ts     // Auth methods (Login, Logout)
+│   ├── middlewares  // place where your controllers are stored
+│   │   └── checkJwt.ts     // for Sending/Receiving JWT Tokens via Cookies ( is Tokens are valides or not)
+│   ├── routes  	 // place where your API Routes are Defined
+│   │   └── indexRoutes.ts     // Routes except API
+│   │   └── teacherRoutes.ts     // Teacher API Routes
+│   ├── views  	 	 // Pug Files (Html Template, Front-end Views)
+├── .gitignore       // standard gitignore file
+├── ormconfig.json   // ORM and database connection configuration
+├── package.json     // node module dependencies
+├── README.md        // simple readme file
+└── tsconfig.json    // TypeScript compiler options
+└── .ENV    // server Configration, environment variables like Database Config, PORT, JWT Secrect Key, BASE_URL etc
+```
+
 # Project Dependencies 
 
 
-**Prodution Dependencies** 
+**P~~strikethrough text~~rodution Dependencies** 
 
 1. @types/bcryptjs: "^2.4.2",
 
