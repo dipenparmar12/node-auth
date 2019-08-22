@@ -1,0 +1,33 @@
+//-  Main_layout (Master Page)
+include layout/variables
+doctype html
+html(lang='en')
+  block head
+    head
+      include layout/head.pug
+  block body
+    body
+      .wrapper
+        //- Sidebar Start
+        block sidebar  
+          include layout/sidebar.pug
+        //- End Sidebar
+
+        .main-panel
+          // Navbar
+          include layout/topnav_bar.pug
+          // End Navbar
+          .content
+            block content
+
+            .container-fluid
+              block content-fluid
+
+          //- Footer Start
+          include layout/footer.pug
+          //- End Footer
+
+      //- Footer Scripts
+      include layout/footer_scripts.pug
+      block footer
+      //- End FooterScripts

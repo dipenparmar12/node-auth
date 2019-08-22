@@ -1,0 +1,44 @@
+//-  Main_layout (Master Page)
+extends _layout
+//- Varialbes 
+block append variables
+  - page_tab_title = "TEACHER LOGIN (sistema-asistencia Nodejs)"
+
+//- Page Content 
+block body
+  body.off-canvas-sidebar
+    .wrapper.wrapper-full-page
+      .page-header.login-page.header-filter(style="background-image: url('/assets/img/login.jpg'); background-size: cover; background-position: top center;", filter-color='black')
+        // you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose "
+        .container
+          .row
+            .col-lg-4.col-md-6.col-sm-8.ml-auto.mr-auto
+              h2.text-danger=error
+              br
+              form.form(action='/login', method='POST')
+                .card.card-login
+                  .card-header.card-header-rose.text-center
+                    h4.card-title Login
+                    .social-line
+                      a.btn.btn-just-icon.btn-link.btn-white(href='#')
+                        i.fa.fa-facebook-square
+                      a.btn.btn-just-icon.btn-link.btn-white(href='#')
+                        i.fa.fa-twitter
+                      a.btn.btn-just-icon.btn-link.btn-white(href='#')
+                        i.fa.fa-google-plus
+                  .card-body
+                    p.card-description.text-center Please Enter Details
+                    span.bmd-form-group
+                      .input-group
+                        .input-group-prepend
+                          span.input-group-text
+                            i.material-icons face
+                        input.form-control(type='text', name='username' placeholder='User Name...', value='dipends', required)
+                    span.bmd-form-group
+                      .input-group
+                        .input-group-prepend
+                          span.input-group-text
+                            i.material-icons lock_outline
+                        input.form-control(type='password', name='password' placeholder='Password...', value='admin', required)
+                  .card-footer.justify-content-center
+                    button.btn.btn-rose.btn-link.btn-lg(id="#login_submit_btn") Lets Go

@@ -1,0 +1,53 @@
+{
+	"name": "typescirpt_nodejs",
+	"version": "1.0.0",
+	"description": "TypeScript Nodejs Express Application for Practice ",
+	"main": "src/server.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"devs": "nodemon src/server.ts",
+		"devi": "nodemon src/index.ts",
+		"build": "tsc -p .",
+		"dev": "set debug=* && ts-node-dev --respawn --transpileOnly ./src/index.ts",
+		"prod": "tsc && node ./build/app.js",
+		"migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run",
+		"p": "parcel src/index.ts"
+	},
+	"keywords": [
+		"nodejs",
+		"express",
+		"typescirpt",
+		"typeorm"
+	],
+	"author": "dipen parmar",
+	"license": "ISC",
+	"dependencies": {
+		"@types/bcryptjs": "^2.4.2",
+		"@types/body-parser": "^1.17.1",
+		"@types/dotenv": "^6.1.1",
+		"@types/helmet": "0.0.43",
+		"@types/jsonwebtoken": "^8.3.3",
+		"assets": "^3.0.1",
+		"bcryptjs": "^2.4.3",
+		"body-parser": "^1.19.0",
+		"class-validator": "^0.10.0",
+		"cookie-parser": "^1.4.4",
+		"dotenv": "^8.1.0",
+		"express": "^4.17.1",
+		"helmet": "^3.20.0",
+		"html": "^1.0.0",
+		"jquery": "^3.4.1",
+		"jsonwebtoken": "^8.5.1",
+		"moment": "^2.24.0",
+		"mysql2": "^1.6.5",
+		"popper.js": "^1.15.0",
+		"pug": "^2.0.4",
+		"reflect-metadata": "^0.1.13",
+		"ts-node-dev": "^1.0.0-pre.41",
+		"typeorm": "^0.2.18",
+		"typescript": "^3.5.3"
+	},
+	"devDependencies": {
+		"nodemon": "^1.19.1"
+	}
+}

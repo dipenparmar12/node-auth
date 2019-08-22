@@ -1,0 +1,65 @@
+.sidebar(data-image='/assets/img/sidebar-1.jpg', data-background-color='black', data-color='azure')
+  //
+    Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+    Tip 2: you can also add an image using data-image tag
+  .logo
+    a.simple-text.logo-mini(href='#')
+      | AT
+    a.simple-text.logo-normal(href='/')
+      | #{app_name}
+  .sidebar-wrapper
+    .user
+      .photo
+        img(src='/images/student/img (3).jpg')
+      .user-info
+        a.username(href='#collapseExample', data-toggle='collapse')
+          span
+            | #{user_name}
+            b.caret
+        #collapseExample.collapse
+          ul.nav
+            li.nav-item
+              a.nav-link(href='#')
+                span.sidebar-mini  MP 
+                span.sidebar-normal  My Profile 
+            li.nav-item
+              a.nav-link(href='#')
+                span.sidebar-mini  EP 
+                span.sidebar-normal  Edit Profile 
+            li.nav-item
+              a.nav-link(href='#')
+                span.sidebar-mini  S 
+                span.sidebar-normal  Settings 
+    ul.nav
+      li.nav-item
+        a.nav-link(href='/attendance')
+          i.material-icons content_paste
+          p  Attendance 
+      li.nav-item
+        a.nav-link(href='/dashboard')
+          i.material-icons dashboard
+          p  Dashboard 
+      li.nav-item
+        a.nav-link(href='/registration')
+          i.material-icons face
+          p  Registration 
+      li.nav-item
+        a.nav-link(href='#formsExamples', data-toggle='collapse')
+          i.material-icons content_paste
+          p
+            | Menu_sub
+            b.caret
+        #formsExamples.collapse
+          ul.nav
+            li.nav-item
+              a.nav-link(href='https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html')
+                span.sidebar-mini  I
+                span.sidebar-normal  Documentation_Core
+            li.nav-item
+              a.nav-link(href='https://demos.creative-tim.com/material-dashboard/examples/dashboard.html')
+                span.sidebar-mini  II 
+                span.sidebar-normal  Documentation_dash
+      li.nav-item
+        a.nav-link(href='/index')
+          i.material-icons date_range
+          p  Calendar 

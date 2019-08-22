@@ -1,0 +1,15 @@
+//-  Main_layout (Master Page)
+extends _layout
+
+block append head
+  style.
+    body: {background-color: #fff !important;}
+
+//- Varialbes 
+block append variables
+  - page_tab_title = "Welcome to sistema-asistencia "
+  - page_primary_heading = "Home"
+
+//- Page Content 
+block content-fluid
+  h1  Hello there

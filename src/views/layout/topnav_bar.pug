@@ -1,0 +1,40 @@
+nav.navbar.navbar-expand-lg.navbar-transparent.navbar-absolute.fixed-top
+  .container-fluid
+    .navbar-wrapper
+      .navbar-minimize
+        button#minimizeSidebar.btn.btn-just-icon.btn-white.btn-fab.btn-round
+          i.material-icons.text_align-center.visible-on-sidebar-regular more_vert
+          i.material-icons.design_bullet-list-67.visible-on-sidebar-mini view_list
+    a.navbar-brand(href='#') #{page_primary_heading}
+    button.navbar-toggler(aria-expanded='false', aria-controls='navigation-index', aria-label='Toggle navigation', type='button', data-toggle='collapse')
+      span.sr-only Toggle navigation
+      span.navbar-toggler-icon.icon-bar
+      span.navbar-toggler-icon.icon-bar
+      span.navbar-toggler-icon.icon-bar
+    .collapse.navbar-collapse.justify-content-end
+      form.navbar-form
+        .input-group.no-border
+          input.form-control(type='text', placeholder='Search...', value='')
+          button.btn.btn-white.btn-round.btn-just-icon(type='submit')
+            i.material-icons search
+            .ripple-container
+      ul.navbar-nav
+        //- li.nav-item.dropdown
+          a#navbarDropdownMenuLink.nav-link(aria-expanded='false', aria-haspopup='true', href='http://example.com', data-toggle='dropdown')
+            i.material-icons notifications
+            span.notification 5
+            p.d-lg-none.d-md-block
+              | Some Actions
+          .dropdown-menu.dropdown-menu-right(aria-labelledby='navbarDropdownMenuLink')
+            a.dropdown-item(href='#') Link One
+            a.dropdown-item(href='#') Link 2
+        li.nav-item.dropdown
+          a#navbarDropdownProfile.nav-link(aria-expanded='false', aria-haspopup='true', href='#pablo', data-toggle='dropdown')
+            i.material-icons person
+            p.d-lg-none.d-md-block
+              | Account
+          .dropdown-menu.dropdown-menu-right(aria-labelledby='navbarDropdownProfile')
+            a.dropdown-item(href='#') Profile
+            a.dropdown-item(href='#') Settings
+            .dropdown-divider
+            a.dropdown-item(href='/logout') Log out

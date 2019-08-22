@@ -1,0 +1,50 @@
+//-  Main_layout (Master Page)
+extends _layout
+//- Varialbes 
+block append variables
+  - page_tab_title = "TEACHER LOGIN (sistema-asistencia Nodejs)"
+
+//- Page Content 
+block body
+  .container 
+    h3 Teacher Registaration
+    .card.col-12
+      .card-header.card-header-rose.card-header-text
+        .card-text
+          h4.card-title Registaration
+      .card-body
+        form.form-horizontal(action='/api/teachers/', method='POST')
+          .row
+            label.col-sm-2.col-form-label Username
+            .col-sm-10
+              .form-group.bmd-form-group
+                input.form-control(type='text', name='username',placeholder='for Login')
+                span.bmd-help A block of help text that breaks onto a new line.
+          .row
+            label.col-sm-2.col-form-label Password
+            .col-sm-10
+              .form-group.bmd-form-group
+                input.form-control(type='password', name='password', placeholder='Password must be strong')
+          .row
+            label.col-sm-2.col-form-label Full Name
+            .col-sm-10
+              .form-group.bmd-form-group
+                input.form-control(type='text',name='name' placeholder='Your Good Name')
+          .row
+            label.col-sm-2.col-form-label Email
+            .col-sm-10
+              .form-group.bmd-form-group
+                input.form-control(type='email', name='email', placeholder='your valid Email Address')
+          .row
+            label.col-sm-2.col-form-label Subject
+            .col-sm-10
+              .form-group.bmd-form-group
+                input.form-control(type='text',name='subject' placeholder='Name of Subject')
+          .row
+            label.col-sm-2.col-form-label Roll
+            .col-sm-10
+              .form-group.bmd-form-group
+                input.form-control(type='text',name='roll' placeholder='Admin || Teacher')
+          .row
+            .col-md-9
+              button.btn.btn-fill.btn-rose.pull-right(type='submit') Sign Up
