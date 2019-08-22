@@ -1,4 +1,4 @@
-﻿# Welcome
+# Welcome
 
 This is a  [Node.js](https://nodejs.org/en/)  module available through the  [npm registry](https://www.npmjs.com/).
 
@@ -89,24 +89,24 @@ View the website at:  [http://localhost:3000/login](http://localhost:3000/login)
 # Project Structure
 ```
 ProjectRoot
-├── src              // place of your TypeScript code
-│   ├── entity       // place where your entities (database models) are stored
-│   │   └── User.ts  // sample entity
-│   ├── controllers  // place where your controllers are stored
-│   │   └── teacherController.ts  // API Controller ( Teacher Entity )
-│   │   └── authController.ts     // Auth methods (Login, Logout)
-│   ├── middlewares  // place where your controllers are stored
-│   │   └── checkJwt.ts     // for Sending/Receiving JWT Tokens via Cookies ( is Tokens are valides or not)
-│   ├── routes  	 // place where your API Routes are Defined
-│   │   └── indexRoutes.ts     // Routes except API
-│   │   └── teacherRoutes.ts     // Teacher API Routes
-│   ├── views  	 	 // Pug Files (Html Template, Front-end Views)
-├── .gitignore       // standard gitignore file
-├── ormconfig.json   // ORM and database connection configuration
-├── package.json     // node module dependencies
-├── README.md        // simple readme file
-└── tsconfig.json    // TypeScript compiler options
-└── .ENV    // server Configration, environment variables like Database Config, PORT, JWT Secrect Key, BASE_URL etc
+├── src              				// place of your TypeScript code
+│   ├── entity       				// place where your entities (database models) are stored
+│   │   └── User.ts  				// sample entity
+│   ├── controllers  				// place where your controllers are stored
+│   │   └── teacherController.ts	// API Controller ( Teacher Entity )
+│   │   └── authController.ts     	// Auth methods (Login, Logout)
+│   ├── middlewares  				// place where your middlewares are stored
+│   │   └── checkJwt.ts     		// for Sending/Receiving JWT Tokens via Cookies ( is Tokens are valides or not)
+│   ├── routes  	 				// place where your API Routes are Defined
+│   │   └── indexRoutes.ts    		// Routes except API
+│   │   └── teacherRoutes.ts     	// Teacher API Routes
+│   ├── views  	 	 				// Pug Files (Html Template, Front-end Views)
+├── .gitignore       				// standard gitignore file
+├── ormconfig.json   				// ORM and database connection configuration
+├── package.json     				// node module dependencies
+├── README.md                       // simple readme file
+└── tsconfig.json    				// TypeScript compiler options
+└── .ENV    						// server Configration, environment variables like Database Config, PORT, JWT Secrect Key, BASE_URL etc
 ```
 
 # Project Dependencies 
@@ -156,4 +156,3 @@ ProjectRoot
 **Dev Dependencies** 
 
 1. nodemon: "^1.19.1"
-
